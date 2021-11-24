@@ -40,3 +40,21 @@ jobs:
           platforms: linux/arm64
           push: true
           tags: martinussuherman/alpine-glibc:3.13-arm64v8
+
+      - name: Build and push alpine 3.12 amd64 glibc 2.32 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.12-amd64-2.32/Dockerfile
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: martinussuherman/alpine-glibc:3.12-amd64-2.32
+
+      - name: Build and push alpine 3.13 amd64 glibc 2.32 image
+        uses: docker/build-push-action@v2
+        with:
+          file: ./3.13-amd64-2.32/Dockerfile
+          context: .
+          platforms: linux/amd64
+          push: true
+          tags: martinussuherman/alpine-glibc:3.13-amd64-2.32
